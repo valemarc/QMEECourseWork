@@ -30,7 +30,7 @@ def swap(x,y,z):
     """Order numbers."""
     if x > y:
         tmp = y
-        y = x
+        y = xq
         x = tmp
     if y > z:
         tmp = z
