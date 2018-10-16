@@ -27,9 +27,10 @@ taxa = [ ('Myotis lucifugus','Chiroptera'),
 
 # Write your script here:
 #taxa_dic = dict(zip([x[1] for x in taxa],[x[0] for x in taxa]))
-taxa_temp = dict([x[1] for x in taxa]))
+taxa_dic = {}
+for x, y in taxa:
+    taxa_dic.setdefault(y, []).append(x)
+print (taxa_dic)
 
-for species in taxa:
-
-    print(species[0])
+taxa_dic['Carnivora']
 
