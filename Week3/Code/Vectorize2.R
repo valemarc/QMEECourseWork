@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Runs the stochastic (with gaussian fluctuations) Ricker Eqn .
 
 rm(list=ls())
@@ -47,3 +48,21 @@ print("Vectorized Stochastic Ricker takes:")
 print(system.time(res2<-stochrickvect()))
 
 
+=======
+Ricker <- function(N0=1, r=1, K=10, generations=50)
+{
+  # Runs a simulation of the Ricker model
+  # Returns a vector of length generations
+  
+  N <- rep(NA, generations)    # Creates a vector of NA
+  
+  N[1] <- N0
+  for (t in 2:generations)
+  {
+    N[t] <- N[t-1] * exp(r*(1.0-(N[t-1]/K)))
+  }
+  return (N)
+}
+
+plot(Ricker(generations=10), type="l")
+>>>>>>> f4b89edd130d82e53f6cbccf9783c28250a28a37
